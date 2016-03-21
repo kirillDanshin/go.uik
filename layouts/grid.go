@@ -18,12 +18,13 @@ package layouts
 
 import (
 	"encoding/json"
-	"github.com/skelterjohn/geom"
-	"github.com/kirillDanshin/go.uik"
 	"io"
 	"log"
 	"math"
 	"strings"
+
+	"github.com/kirillDanshin/go.uik"
+	"github.com/skelterjohn/geom"
 )
 
 func VBox(config GridConfig, blocks ...*uik.Block) (l *Layouter) {

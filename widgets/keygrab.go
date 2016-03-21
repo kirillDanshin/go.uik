@@ -21,8 +21,8 @@ import (
 	"image/color"
 
 	"github.com/dddaisuke/draw2d/draw2d"
-	"github.com/skelterjohn/geom"
 	"github.com/kirillDanshin/go.uik"
+	"github.com/skelterjohn/geom"
 )
 
 type KeyGrab struct {

@@ -22,8 +22,8 @@ import (
 	"time"
 
 	"github.com/dddaisuke/draw2d/draw2d"
-	"github.com/skelterjohn/geom"
 	"github.com/kirillDanshin/go.uik"
+	"github.com/skelterjohn/geom"
 	"github.com/skelterjohn/go.wde"
 )
 

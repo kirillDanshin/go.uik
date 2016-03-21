@@ -17,8 +17,8 @@
 package layouts
 
 import (
-	"github.com/skelterjohn/geom"
 	"github.com/kirillDanshin/go.uik"
+	"github.com/skelterjohn/geom"
 )
 
 type PadConfig struct {
