@@ -1,4 +1,4 @@
-## go.uik [![GoDoc](https://godoc.org/github.com/kirillDanshin/go.uik?status.svg)](https://godoc.org/github.com/kirillDanshin/go.uik)
+## go.uik [![GoDoc](https://godoc.org/github.com/kirillDanshin/go.uik?status.svg)](https://godoc.org/github.com/kirillDanshin/go.uik) [![Go Report Card](https://goreportcard.com/badge/github.com/kirillDanshin/go.uik)](https://goreportcard.com/report/github.com/kirillDanshin/go.uik)
 
 A concurrent UI kit written in pure go.
 
