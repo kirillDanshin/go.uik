@@ -67,8 +67,14 @@ func (p *PadLayout) GetHint() (hint uik.SizeHint) {
 func (p *PadLayout) GetLayout(size geom.Coord) (l Layout) {
 	l = make(Layout)
 	l[p.block] = geom.Rect{
-		Min: geom.Coord{p.config.Left, p.config.Top},
-		Max: geom.Coord{size.X - p.config.Right, size.Y - p.config.Bottom},
+		Min: geom.Coord{
+			X: p.config.Left,
+			Y: p.config.Top,
+		},
+		Max: geom.Coord{
+			X: size.X - p.config.Right,
+			Y: size.Y - p.config.Bottom,
+		},
 	}
 	return
 }

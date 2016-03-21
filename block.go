@@ -135,7 +135,10 @@ func (b *Block) handleSizeHints() {
 
 func (b *Block) Bounds() geom.Rect {
 	return geom.Rect{
-		geom.Coord{0, 0},
+		geom.Coord{
+			X: 0,
+			Y: 0,
+		},
 		b.Size,
 	}
 }

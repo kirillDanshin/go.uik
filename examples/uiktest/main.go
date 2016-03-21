@@ -23,7 +23,10 @@ func main() {
 func uiktest() {
 
 	wbounds := geom.Rect{
-		Max: geom.Coord{480, 320},
+		Max: geom.Coord{
+			X: 480,
+			Y: 320,
+		},
 	}
 	w, err := uik.NewWindow(nil, int(wbounds.Max.X), int(wbounds.Max.Y))
 	if err != nil {
@@ -39,7 +42,17 @@ func uiktest() {
 	// we modify the copy for a special message to display
 	ld.Text = "clicked!"
 
-	l := widgets.NewLabel(geom.Coord{100, 50}, widgets.LabelConfig{"text", 14, color.Black})
+	l := widgets.NewLabel(
+		geom.Coord{
+			X: 100,
+			Y: 50,
+		},
+		widgets.LabelConfig{
+			Text:     "text",
+			FontSize: 14,
+			Color:    color.Black,
+		},
+	)
 	b2 := widgets.NewButton("there")
 	ld2 := b2.Label.GetConfig()
 	ld2.Text = "BAM"
@@ -77,8 +90,12 @@ func uiktest() {
 				GridY: 0,
 			},
 			"ur": {
-				GridX: 1, GridY: 0,
-				MinSize:      geom.Coord{60, 60},
+				GridX: 1,
+				GridY: 0,
+				MinSize: geom.Coord{
+					X: 60,
+					Y: 60,
+				},
 				AnchorRight:  true,
 				AnchorBottom: true,
 			},

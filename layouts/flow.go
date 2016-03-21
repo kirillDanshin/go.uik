@@ -78,7 +78,13 @@ func (f *Flow) reflow() {
 			//println("skip", child)
 			continue
 		}
-		cbounds := geom.Rect{geom.Coord{left, 0}, geom.Coord{}}
+		cbounds := geom.Rect{
+			geom.Coord{
+				X: left,
+				Y: 0,
+			},
+			geom.Coord{},
+		}
 		if csh.PreferredSize.Y <= renderSize.Y {
 			cbounds.Max.Y = csh.PreferredSize.Y
 		} else if csh.MinSize.Y <= renderSize.Y {

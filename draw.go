@@ -69,5 +69,4 @@ func windowPaintGen(x interface{}) (pf PaintFunc) {
 		draw2d.Rect(gc, 0, 0, wf.Size.X, wf.Size.Y)
 		gc.Fill()
 	}
-	return
 }

@@ -17,11 +17,12 @@
 package uik
 
 import (
-	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.wde"
 	"image"
 	"image/draw"
 	"time"
+
+	"github.com/skelterjohn/geom"
+	"github.com/skelterjohn/go.wde"
 )
 
 // FrameDelay is how long the window will wait, after receiving an invalidation, to
@@ -46,7 +47,10 @@ func NewWindow(parent wde.Window, width, height int) (wf *WindowFoundation, err 
 	if err != nil {
 		return
 	}
-	wf.Size = geom.Coord{float64(width), float64(height)}
+	wf.Size = geom.Coord{
+		X: float64(width),
+		Y: float64(height),
+	}
 	wf.Initialize()
 
 	if ReportIDs {
@@ -114,16 +118,25 @@ func (wf *WindowFoundation) handleWindowEvents() {
 				Event:           ev,
 				MouseMovedEvent: e,
 				MouseLocator: MouseLocator{
-					Loc: geom.Coord{float64(e.Where.X), float64(e.Where.Y)},
+					Loc: geom.Coord{
+						X: float64(e.Where.X),
+						Y: float64(e.Where.Y),
+					},
 				},
-				From: geom.Coord{float64(e.From.X), float64(e.From.Y)},
+				From: geom.Coord{
+					X: float64(e.From.X),
+					Y: float64(e.From.Y),
+				},
 			})
 		case wde.MouseDownEvent:
 			wf.UserEventsIn.SendOrDrop(MouseDownEvent{
 				Event:          ev,
 				MouseDownEvent: e,
 				MouseLocator: MouseLocator{
-					Loc: geom.Coord{float64(e.Where.X), float64(e.Where.Y)},
+					Loc: geom.Coord{
+						X: float64(e.Where.X),
+						Y: float64(e.Where.Y),
+					},
 				},
 			})
 		case wde.MouseUpEvent:
@@ -132,7 +145,10 @@ func (wf *WindowFoundation) handleWindowEvents() {
 				Event:        ev,
 				MouseUpEvent: e,
 				MouseLocator: MouseLocator{
-					Loc: geom.Coord{float64(e.Where.X), float64(e.Where.Y)},
+					Loc: geom.Coord{
+						X: float64(e.Where.X),
+						Y: float64(e.Where.Y),
+					},
 				},
 			})
 		case wde.MouseDraggedEvent:
@@ -140,27 +156,45 @@ func (wf *WindowFoundation) handleWindowEvents() {
 				Event:             ev,
 				MouseDraggedEvent: e,
 				MouseLocator: MouseLocator{
-					Loc: geom.Coord{float64(e.Where.X), float64(e.Where.Y)},
+					Loc: geom.Coord{
+						X: float64(e.Where.X),
+						Y: float64(e.Where.Y),
+					},
 				},
-				From: geom.Coord{float64(e.From.X), float64(e.From.Y)},
+				From: geom.Coord{
+					X: float64(e.From.X),
+					Y: float64(e.From.Y),
+				},
 			})
 		case wde.MouseEnteredEvent:
 			wf.UserEventsIn.SendOrDrop(MouseEnteredEvent{
 				Event:             ev,
 				MouseEnteredEvent: e,
 				MouseLocator: MouseLocator{
-					Loc: geom.Coord{float64(e.Where.X), float64(e.Where.Y)},
+					Loc: geom.Coord{
+						X: float64(e.Where.X),
+						Y: float64(e.Where.Y),
+					},
 				},
-				From: geom.Coord{float64(e.From.X), float64(e.From.Y)},
+				From: geom.Coord{
+					X: float64(e.From.X),
+					Y: float64(e.From.Y),
+				},
 			})
 		case wde.MouseExitedEvent:
 			wf.UserEventsIn.SendOrDrop(MouseExitedEvent{
 				Event:            ev,
 				MouseExitedEvent: e,
 				MouseLocator: MouseLocator{
-					Loc: geom.Coord{float64(e.Where.X), float64(e.Where.Y)},
+					Loc: geom.Coord{
+						X: float64(e.Where.X),
+						Y: float64(e.Where.Y),
+					},
 				},
-				From: geom.Coord{float64(e.From.X), float64(e.From.Y)},
+				From: geom.Coord{
+					X: float64(e.From.X),
+					Y: float64(e.From.Y),
+				},
 			})
 		case wde.KeyDownEvent:
 			wf.UserEventsIn.SendOrDrop(KeyDownEvent{

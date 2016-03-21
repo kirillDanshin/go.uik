@@ -91,7 +91,10 @@ func (b *Button) Initialize() {
 	sh := uik.SizeHint{
 		MinSize:       cs,
 		PreferredSize: cs,
-		MaxSize:       geom.Coord{math.Inf(1), math.Inf(1)},
+		MaxSize: geom.Coord{
+			X: math.Inf(1),
+			Y: math.Inf(1),
+		},
 	}
 	b.SetSizeHint(sh)
 

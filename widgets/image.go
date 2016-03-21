@@ -93,7 +93,10 @@ func (i *Image) updateConfig(config ImageConfig) {
 	i.SetSizeHint(uik.SizeHint{
 		MinSize:       geom.Coord{},
 		PreferredSize: i.config.ImageSize(),
-		MaxSize:       geom.Coord{math.Inf(1), math.Inf(1)},
+		MaxSize: geom.Coord{
+			X: math.Inf(1),
+			Y: math.Inf(1),
+		},
 	})
 	i.Invalidate()
 }

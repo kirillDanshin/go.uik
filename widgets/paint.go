@@ -31,8 +31,14 @@ func init() {
 			gc.Clear()
 
 			bbounds := geom.Rect{
-				Min: geom.Coord{0, 0},
-				Max: geom.Coord{b.Size.X, b.Size.Y},
+				Min: geom.Coord{
+					X: 0,
+					Y: 0,
+				},
+				Max: geom.Coord{
+					X: b.Size.X,
+					Y: b.Size.Y,
+				},
 			}
 
 			// gc.SetStrokeColor(color.Black)
