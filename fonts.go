@@ -25,9 +25,20 @@ import (
 )
 
 var DefaultFontData = draw2d.FontData{
-	Name:   "luxi",
+	Name:   "Fira Sans Light",
 	Family: draw2d.FontFamilySans,
 	Style:  draw2d.FontStyleNormal,
+}
+
+func init() {
+	font, err := truetype.Parse(defaultFont())
+	if err != nil {
+		// TODO: log error
+		println("error!")
+		println(err.Error())
+	}
+
+	draw2d.RegisterFont(DefaultFontData, font)
 }
 
 func GetFontHeight(fd draw2d.FontData, size float64) (height float64) {
@@ -63,15 +74,4 @@ func RenderString(text string, fd draw2d.FontData, size float64, color color.Col
 	})
 
 	return
-}
-
-func init() {
-	font, err := truetype.Parse(luxisr_ttf())
-	if err != nil {
-		// TODO: log error
-		println("error!")
-		println(err.Error())
-	}
-
-	draw2d.RegisterFont(DefaultFontData, font)
 }
