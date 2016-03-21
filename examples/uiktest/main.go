@@ -50,7 +50,7 @@ func uiktest() {
 	clicker := make(widgets.Clicker)
 	b.AddClicker <- clicker
 	go func() {
-		for _ = range clicker {
+		for range clicker {
 			b.Label.SetConfig(ld)
 			l.SetConfig(widgets.LabelConfig{"ohnoes", 20, color.Black})
 		}
@@ -59,7 +59,7 @@ func uiktest() {
 	clicker2 := make(widgets.Clicker)
 	b2.AddClicker <- clicker2
 	go func() {
-		for _ = range clicker2 {
+		for range clicker2 {
 			b.Label.SetConfig(ld2)
 			b2.Label.SetConfig(ld)
 			l.SetConfig(widgets.LabelConfig{"oops", 14, color.Black})
@@ -72,25 +72,25 @@ func uiktest() {
 
 	gconfig := layouts.GridConfig{
 		Components: map[string]layouts.GridComponent{
-			"ul": layouts.GridComponent{
+			"ul": {
 				GridX: 0,
 				GridY: 0,
 			},
-			"ur": layouts.GridComponent{
+			"ur": {
 				GridX: 1, GridY: 0,
 				MinSize:      geom.Coord{60, 60},
 				AnchorRight:  true,
 				AnchorBottom: true,
 			},
-			"ll": layouts.GridComponent{
+			"ll": {
 				GridX: 0, GridY: 1,
 			},
-			"lr": layouts.GridComponent{
+			"lr": {
 				GridX: 1, GridY: 1,
 				AnchorRight: true,
 				AnchorTop:   true,
 			},
-			"firstbutton": layouts.GridComponent{
+			"firstbutton": {
 				GridX: 0, GridY: 2,
 				ExtraX:       1,
 				AnchorLeft:   true,
@@ -98,7 +98,7 @@ func uiktest() {
 				AnchorTop:    true,
 				AnchorBottom: true,
 			},
-			"secondbutton": layouts.GridComponent{
+			"secondbutton": {
 				GridX: 1, GridY: 3,
 				ExtraX:       1,
 				AnchorLeft:   true,
@@ -143,14 +143,14 @@ func uiktest() {
 	clicker3 := make(widgets.Clicker)
 	b.AddClicker <- clicker3
 	go func() {
-		for _ = range clicker3 {
+		for range clicker3 {
 			l0_0.SetConfig(widgets.LabelConfig{"Pow", 12, color.Black})
 		}
 	}()
 	clicker4 := make(widgets.Clicker)
 	b2.AddClicker <- clicker4
 	go func() {
-		for _ = range clicker4 {
+		for range clicker4 {
 			l0_0.SetConfig(widgets.LabelConfig{"gotcha", 12, color.Black})
 		}
 	}()
