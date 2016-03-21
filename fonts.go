@@ -17,10 +17,11 @@
 package uik
 
 import (
-	"code.google.com/p/draw2d/draw2d"
-	"code.google.com/p/freetype-go/freetype/truetype"
 	"image"
 	"image/color"
+
+	"github.com/dddaisuke/draw2d/draw2d"
+	"github.com/dddaisuke/freetype-go/freetype/truetype"
 )
 
 var DefaultFontData = draw2d.FontData{

@@ -18,7 +18,7 @@ package layouts
 
 import (
 	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
+	"github.com/kirillDanshin/go.uik"
 )
 
 type PadConfig struct {
@@ -74,7 +74,7 @@ func (p *PadLayout) GetLayout(size geom.Coord) (l Layout) {
 }
 
 // Do not call this method except from within the containing
-// Layout's goroutine. 
+// Layout's goroutine.
 func (p *PadLayout) ConfigUnsafe(cfg interface{}) {
 	switch x := cfg.(type) {
 	case PadConfig:

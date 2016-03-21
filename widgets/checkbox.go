@@ -18,7 +18,7 @@ package widgets
 
 import (
 	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
+	"github.com/kirillDanshin/go.uik"
 )
 
 type Checker chan bool

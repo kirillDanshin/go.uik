@@ -17,9 +17,10 @@
 package uik
 
 import (
-	"code.google.com/p/draw2d/draw2d"
 	"image"
 	"image/color"
+
+	"github.com/dddaisuke/draw2d/draw2d"
 )
 
 func ClearPaint(gc draw2d.GraphicContext) {

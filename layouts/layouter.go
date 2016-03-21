@@ -17,8 +17,8 @@
 package layouts
 
 import (
+	"github.com/kirillDanshin/go.uik"
 	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
 )
 
 type Layout map[*uik.Block]geom.Rect

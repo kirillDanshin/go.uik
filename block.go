@@ -17,9 +17,10 @@
 package uik
 
 import (
-	"code.google.com/p/draw2d/draw2d"
-	"github.com/skelterjohn/geom"
 	"image/draw"
+
+	"github.com/dddaisuke/draw2d/draw2d"
+	"github.com/skelterjohn/geom"
 )
 
 type BlockID int
@@ -70,7 +71,7 @@ type Block struct {
 
 	HasKeyFocus bool
 
-	// size of block 
+	// size of block
 	Size geom.Coord
 }
 

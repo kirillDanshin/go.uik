@@ -17,12 +17,13 @@
 package uik
 
 import (
-	"code.google.com/p/draw2d/draw2d"
-	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.wde"
 	"image"
 	"image/draw"
 	"sync"
+
+	"github.com/dddaisuke/draw2d/draw2d"
+	"github.com/skelterjohn/geom"
+	"github.com/skelterjohn/go.wde"
 )
 
 type BlockSizeHint struct {

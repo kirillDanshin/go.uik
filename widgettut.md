@@ -1,6 +1,6 @@
 #Creating a widget with go.uik
 
-As some of you may know, I've been working lately on a pure go GUI toolkit called go.uik (go UI kit). The project's repository is available on github (http://github.com/skelterjohn/go.uik).
+As some of you may know, I've been working lately on a pure go GUI toolkit called go.uik (go UI kit). The project's repository is available on github (http://github.com/kirillDanshin/go.uik).
 
 One of my core goals with go.uik is to ensure that it doesn't get in its own way. Specifically, components cannot block each other. If component 1 decides to go off and do a web search in response to an event, this won't slow down component 2 on the other side of the window.
 
@@ -45,7 +45,7 @@ First, I'll create the source file ```go.uik/widgets/radio.go``` and declare the
 package widgets
 
 import (
-	"github.com/skelterjohn/go.uik"
+	"github.com/kirillDanshin/go.uik"
 )
 
 type Radio struct {
@@ -541,9 +541,9 @@ package main
 import (
 	"fmt"
 	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
-	"github.com/skelterjohn/go.uik/layouts"
-	"github.com/skelterjohn/go.uik/widgets"
+	"github.com/kirillDanshin/go.uik"
+	"github.com/kirillDanshin/go.uik/layouts"
+	"github.com/kirillDanshin/go.uik/widgets"
 	"github.com/skelterjohn/go.wde"
 	"image/color"
 )

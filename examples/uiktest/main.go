@@ -3,13 +3,14 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
-	"github.com/skelterjohn/go.uik/layouts"
-	"github.com/skelterjohn/go.uik/widgets"
-	"github.com/skelterjohn/go.wde"
 	"image/color"
 	"image/gif"
+
+	"github.com/kirillDanshin/go.uik"
+	"github.com/kirillDanshin/go.uik/layouts"
+	"github.com/kirillDanshin/go.uik/widgets"
+	"github.com/skelterjohn/geom"
+	"github.com/skelterjohn/go.wde"
 )
 
 func main() {

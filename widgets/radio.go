@@ -17,12 +17,13 @@
 package widgets
 
 import (
-	"code.google.com/p/draw2d/draw2d"
-	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
-	"github.com/skelterjohn/go.uik/layouts"
-	"github.com/skelterjohn/go.wde"
 	"image/color"
+
+	"github.com/dddaisuke/draw2d/draw2d"
+	"github.com/kirillDanshin/go.uik"
+	"github.com/kirillDanshin/go.uik/layouts"
+	"github.com/skelterjohn/geom"
+	"github.com/skelterjohn/go.wde"
 )
 
 type RadioSelection struct {

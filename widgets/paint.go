@@ -17,10 +17,11 @@
 package widgets
 
 import (
-	"code.google.com/p/draw2d/draw2d"
-	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
 	"image/color"
+
+	"github.com/dddaisuke/draw2d/draw2d"
+	"github.com/skelterjohn/geom"
+	"github.com/kirillDanshin/go.uik"
 )
 
 func init() {

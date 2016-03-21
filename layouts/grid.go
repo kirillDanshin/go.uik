@@ -19,7 +19,7 @@ package layouts
 import (
 	"encoding/json"
 	"github.com/skelterjohn/geom"
-	"github.com/skelterjohn/go.uik"
+	"github.com/kirillDanshin/go.uik"
 	"io"
 	"log"
 	"math"
