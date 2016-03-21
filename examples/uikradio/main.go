@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"image/color"
 
+	_ "github.com/skelterjohn/go.wde/init"
+
 	"github.com/kirillDanshin/go.uik"
 	"github.com/kirillDanshin/go.uik/layouts"
 	"github.com/kirillDanshin/go.uik/widgets"
